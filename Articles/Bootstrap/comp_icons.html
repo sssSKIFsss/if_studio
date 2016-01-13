@@ -1,0 +1,1328 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>if-studio</title>
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <!-- Подключаем стили бутстрапа: -->
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+	<!-- Подключаем стили для подсветки кода: -->
+	<link type="text/css" rel="stylesheet" href="../../css/prettify.css">
+	<!-- Подключаем свои стили: -->
+	<link href="../../css/main.css" rel="stylesheet" type="text/css">
+	<link href="../css/articles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onload="prettyPrint()">
+	<!-- шапка и главное меню -->
+	<header class="container-fluid">   
+    <nav class="navbar navbar-default navbar-static-top articles-navbar">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mainNavbar">
+          <span class="sr-only">Навигатор</span>
+          <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../index.html"><strong>if(studio)</strong></a>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">HTML<span class="sr-only">(current)</span></a></li>
+          <li><a href="#">CSS</a></li>
+          <li><a href="#">JavaScript</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+              Frameworks<span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li class="active"><a href="#">Bootstrap</a></li>
+              <li><a href="#">Foundation</a></li>
+              <li class="divider"></li>
+              <li><a href="#">jQuery</a></li>
+            </ul>
+          </li>          
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+              CMS<span class="caret"></span> </a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">1С-Битрикс</a></li>
+              <li><a href="#">Joomla!</a></li>
+              <li><a href="#">Drupal</a></li>
+              <li><a href="#">Word Press</a></li>
+            </ul>
+          </li>
+        </ul> <!-- /.navbar-nav .navbar-right -->
+      </div>	<!-- /.navbar-collapse --> 
+    </nav> <!-- /.navbar-static-top -->
+  </header>	<!-- /.container-fluid -->     
+	
+  <!-- основное содержание -->
+  <main class="container">
+    <div class="row">
+      <article class="col-sm-12 col-md-8 col-lg-8">
+        <!-- хлебные крошки -->
+        <ol class="breadcrumb">
+          <li><a href="../../index.html">Главная</a></li>
+          <li><a href="index.html">Bootstrap</a></li>
+
+
+
+
+
+
+          <li class="active">Иконки</li>
+        </ol>
+        <!-- Галерея иконок -->
+        <h2>Иконки (Icons)</h2>
+        <p><em>В статье описывается вариант использования иконок Twitter Bootstrap 3.</em></p>
+        <section>
+          <h3>Иконки Glyphicons</h3>
+          <p>Twitter Bootstrap включает в себя 200 иконок в формате шрифта из набора Glyphicons Halflings. С помощью CSS свойства "color" вы можете изменять цвет иконок, применяя данное свойство к определенным элементам.</p>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-asterisk icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-asterisk</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-plus icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-plus</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-euro icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-euro</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-minus icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-minus</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-cloud icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-cloud</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-envelope icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-envelope</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-pencil icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-pencil</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-glass icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-glass</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-music icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-music</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-search icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-search</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-heart icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-heart</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-star icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-star</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-star-empty icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-star-empty</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-user icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-user</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-film icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-film</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-th-large icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-th-large</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-th icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-th</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-th-list icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-th-list</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-ok icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-ok</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-remove icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-remove</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-zoom-in icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-zoom-in</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-zoom-out icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-zoom-out</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-off icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-off</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-signal icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-signal</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-cog icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-cog</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-trash icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-trash</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-home icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-home</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-file icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-file</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-time icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-time</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-road icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-road</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-download-alt icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-download-alt</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-download icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-download</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-upload icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-upload</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-inbox icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-inbox</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-play-circle icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-play-circle</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-repeat icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-repeat</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-refresh icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-refresh</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-list-alt icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-list-alt</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-lock icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-lock</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-flag icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-flag</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-headphones icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-headphones</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-volume-off icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-volume-off</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-volume-down icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-volume-down</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-volume-up icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-volume-up</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-qrcode icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-qrcode</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-barcode icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-barcode</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-tag icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-tag</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-tags icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-tags</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-book icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-book</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-bookmark icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-bookmark</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-print icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-print</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-camera icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-camera</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-font icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-font</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-bold icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-bold</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-italic icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-italic</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-text-height icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-text-height</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-text-width icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-text-width</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-align-left icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-align-left</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-align-center icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-align-center</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-align-right icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-align-right</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-align-justify icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-align-justify</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-list icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-list</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-indent-left icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-indent-left</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-indent-right icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-indent-right</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-facetime-video icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-facetime-video</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-picture icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-picture</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-map-marker icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-map-marker</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-adjust icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-adjust</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-tint icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-tint</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-edit icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-edit</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-share icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-share</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-check icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-check</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-move icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-move</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-step-backward icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-step-backward</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-fast-backward icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-fast-backward</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-backward icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-backward</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-play icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-play</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-pause icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-pause</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-stop icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-stop</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-forward icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-forward</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-fast-forward icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-fast-forward</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-step-forward icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-step-forward</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-eject icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-eject</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-chevron-left icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-chevron-left</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-chevron-right icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-chevron-right</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-plus-sign icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-plus-sign</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-minus-sign icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-minus-sign</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-remove-sign icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-remove-sign</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-ok-sign icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-ok-sign</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-question-sign icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-question-sign</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-info-sign icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-info-sign</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-screenshot icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-screenshot</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-remove-circle icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-remove-circle</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-ok-circle icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-ok-circle</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-ban-circle icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-ban-circle</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-arrow-left icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-arrow-left</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-arrow-right icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-arrow-right</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-arrow-up icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-arrow-up</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-arrow-down icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-arrow-down</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-share-alt icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-share-alt</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-resize-full icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-resize-full</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-resize-small icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-resize-small</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-exclamation-sign icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-exclamation-sign</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-gift icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-gift</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-leaf icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-leaf</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-fire icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-fire</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-eye-open icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-eye-open</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-eye-close icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-eye-close</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-warning-sign icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-warning-sign</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-plane icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-plane</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-calendar icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-calendar</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-random icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-random</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-comment icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-comment</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-magnet icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-magnet</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-chevron-up icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-chevron-up</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-chevron-down icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-chevron-down</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-retweet icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-retweet</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-shopping-cart icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-shopping-cart</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-folder-close icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-folder-close</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-folder-open icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-folder-open</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-resize-vertical icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-resize-vertical</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-resize-horizontal icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-resize-horizontal</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-hdd icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-hdd</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-bullhorn icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-bullhorn</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-bell icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-bell</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-certificate icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-certificate</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-thumbs-up icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-thumbs-up</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-thumbs-down icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-thumbs-down</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-hand-right icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-hand-right</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-hand-left icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-hand-left</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-hand-up icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-hand-up</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-hand-down icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-hand-down</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-circle-arrow-right icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-circle-arrow-right</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-circle-arrow-left icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-circle-arrow-left</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-circle-arrow-up icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-circle-arrow-up</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-circle-arrow-down icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-circle-arrow-down</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-globe icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-globe</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-wrench icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-wrench</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-tasks icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-tasks</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-filter icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-filter</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-briefcase icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-briefcase</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-fullscreen icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-fullscreen</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-dashboard icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-dashboard</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-paperclip icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-paperclip</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-heart-empty icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-heart-empty</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-link icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-link</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-phone icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-phone</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-pushpin icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-pushpin</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-usd icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-usd</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-gbp icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-gbp</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-sort icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-sort</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-sort-by-alphabet icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-sort-by-alphabet</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-sort-by-alphabet-alt icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-sort-by-alphabet-alt</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-sort-by-order icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-sort-by-order</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-sort-by-order-alt icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-sort-by-order-alt</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-sort-by-attributes icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-sort-by-attributes</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-sort-by-attributes-alt icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-sort-by-attributes-alt</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-unchecked icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-unchecked</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-expand icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-expand</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-collapse-down icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-collapse-down</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-collapse-up icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-collapse-up</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-log-in icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-log-in</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-flash icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-flash</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-log-out icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-log-out</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-new-window icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-new-window</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-record icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-record</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-save icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-save</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-open icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-open</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-saved icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-saved</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-import icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-import</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-export icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-export</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-send icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-send</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-floppy-disk icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-floppy-disk</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-floppy-saved icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-floppy-saved</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-floppy-remove icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-floppy-remove</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-floppy-save icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-floppy-save</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-floppy-open icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-floppy-open</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-credit-card icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-credit-card</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-transfer icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-transfer</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-cutlery icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-cutlery</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-header icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-header</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-compressed icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-compressed</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-earphone icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-earphone</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-phone-alt icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-phone-alt</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-tower icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-tower</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-stats icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-stats</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-sd-video icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-sd-video</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-hd-video icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-hd-video</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-subtitles icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-subtitles</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-sound-stereo icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-sound-stereo</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-sound-dolby icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-sound-dolby</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-sound-5-1 icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-sound-5-1</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-sound-6-1 icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-sound-6-1</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-sound-7-1 icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-sound-7-1</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-copyright-mark icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-copyright-mark</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-registration-mark icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-registration-mark</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-cloud-download icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-cloud-download</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-cloud-upload icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-cloud-upload</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-tree-conifer icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-tree-conifer</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-tree-deciduous icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-tree-deciduous</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-cd icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-cd</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-save-file icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-save-file</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-open-file icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-open-file</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-level-up icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-level-up</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-copy icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-copy</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-paste icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-paste</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-alert icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-alert</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-equalizer icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-equalizer</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-king icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-king</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-queen icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-queen</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-pawn icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-pawn</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-bishop icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-bishop</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-knight icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-knight</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-baby-formula icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-baby-formula</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-tent icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-tent</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-blackboard icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-blackboard</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-bed icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-bed</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-apple icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-apple</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-erase icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-erase</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-hourglass icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-hourglass</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-lamp icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-lamp</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-duplicate icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-duplicate</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-piggy-bank icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-piggy-bank</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-scissors icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-scissors</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-bitcoin icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-bitcoin</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-btc icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-btc</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-xbt icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-xbt</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-yen icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-yen</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-jpy icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-jpy</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-ruble icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-ruble</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-rub icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-rub</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-scale icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-scale</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-ice-lolly icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-ice-lolly</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-ice-lolly-tasted icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-ice-lolly-tasted</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-education icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-education</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-option-horizontal icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-option-horizontal</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-option-vertical icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-option-vertical</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-modal-window icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-modal-window</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-oil icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-oil</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-grain icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-grain</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-sunglasses icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-sunglasses</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-text-size icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-text-size</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-text-color icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-text-color</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-text-background icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-text-background</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-object-align-top icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-object-align-top</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-object-align-bottom icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-object-align-bottom</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-object-align-horizontal icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-object-align-horizontal</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-object-align-left icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-object-align-left</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-object-align-vertical icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-object-align-vertical</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-object-align-right icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-object-align-right</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-triangle-right icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-triangle-right</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-triangle-left icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-triangle-left</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-triangle-bottom icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-triangle-bottom</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-triangle-top icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-triangle-top</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-console icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-console</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-superscript icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-superscript</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-subscript icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-subscript</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-menu-left icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-menu-left</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-menu-right icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-menu-right</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-menu-down icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-menu-down</p>
+          </span>
+          <span class="icon-viewer">
+            <p class="glyphicon glyphicon-menu-up icon-viewer__img"></p>
+            <p class="icon-viewer__name">glyphicon-menu-up</p>
+          </span>
+        </section>
+        <section>
+          <h4>Использование иконок</h4>
+          <p>Для использования иконок Bootstrap необходимо добавить тег &lt;span&gt; и применить базовый класс значков glyphicon и индивидуальный класс иконки glyphicon-*. Общий синтаксис для использования иконок Bootstrap:</p>
+          <pre  class="prettyprint linenums">
+<span class="glyphicon glyphicon-class-name"></span>
+          </pre>
+          <p>где: "glyphicon-class-name" - это имя класса конкретного значка например glyphicon-asterisk, glyphicon-user, glyphicon-star и т.д.) которые заданы в файле bootstrap.css.</p>
+          <div class="alert alert-danger"><strong>Внимание!</strong> Классы значков не могут сочетаться с другими элементами. Они спроектированы, чтобы быть отдельными элементами. Не смешивайте их с другими компонентами. 
+          </div>          
+          <h4>Примеры использования различных значков:</h4>
+          <pre class="prettyprint linenums demo">
+<button type="button" class="btn btn-default btn-lg">
+  <span class="glyphicon glyphicon-music" style="color:red;"></span> Избранное
+</button>
+<button type="button" class="btn btn-default">
+  <span class="glyphicon glyphicon-pencil"></span> Избранное
+</button>
+<button type="button" class="btn btn-default btn-sm">
+  <span class="glyphicon glyphicon-glass"></span> Избранное
+</button>
+<button type="button" class="btn btn-default btn-xs">
+  <span class="glyphicon glyphicon-plus"></span> Избранное
+</button>
+          </pre>
+        </section>
+
+        
+        
+        
+        
+      </article>
+      <aside class="col-sm-12 col-md-4 col-lg-4">
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            <h3 class="panel-title">Содержание</h3>
+          </div>
+          <div class="panel-body">
+            <div class="panel-group" id="accordion">
+              <!-- 1 панель -->
+              <div class="panel panel-warning">
+                <!-- Заголовок 1 панели -->
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Bootstrap 3 - Основы</a>
+                  </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse">
+                  <!-- Содержимое 1 панели -->
+                  <div class="panel-body">
+                    <ul class="nav nav-pills nav-stacked">
+                      <li><a href="index.html">Введение</a></li>
+                      <li><a href="work_start.html">Начало работы</a></li>
+                      <li><a href="grid-system.html">Система сеток</a></li>
+                      <li><a href="grid-work.html">Работа с элементами сетки</a></li>
+                      <li><a href="columns-shift.html">Перестановка колонок сетки</a></li>
+                      <li><a href="text-work.html">Работа с текстом</a></li>
+                      <li><a href="tables.html">Таблицы</a></li>
+                      <li><a href="lists.html">Списки</a></li>
+                      <li><a href="forms1.html">Формы (часть 1)</a></li>
+                      <li><a href="forms2.html">Формы (часть 2)</a></li>
+                      <li><a href="images.html">Изображения</a></li>
+                      <li><a href="classes.html">Вспомогательные Классы</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div> <!-- //.panel -->
+              <!-- 2 панель -->
+              <div class="panel panel-success">
+                <!-- Заголовок 2 панели -->
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Bootstrap 3 - Компоненты</a>
+                  </h4>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse in">
+                  <!-- Содержимое 2 панели -->
+                  <div class="panel-body">
+                    <ul class="nav nav-pills nav-stacked">
+                      <li><a href="comp_icons.html">Иконки (glyphicon)</a></li>
+                      <li><a href="comp_awesome-icons.html">Иконки Awesome</a></li>
+                      <li><a href="comp_nav.html">Навигационная панель (nav)</a></li>
+                      <li><a href="comp_navbar.html">Навигационное меню (navbar)</a></li>
+                      <li><a href="comp_navbar-setting.html">Настройка компонента navbar</a></li>
+                      <li><a href="comp_breadcrumb.html">Навигационные цепочки (breadcrumb)</a></li>
+                      <li><a href="comp_pagination.html">Пагинация(pagination)</a></li>
+                      <li><a href="comp_label.html">Метки и значки (label/badge)</a></li>
+                      <li><a href="comp_jumbotron.html">Jumbotron</a></li>
+                      <li><a href="comp_progress.html">Индикаторы процессов (progress)</a></li>
+                      <li><a href="comp_panel.html">Панели (panel)</a></li>
+                      <li><a href="comp_callout.html">Выноски (Callout)</a></li>
+                      <li><a href="comp_media.html">Медиа-компонент (media)</a></li>
+                      <li><a href="comp_other.html">Другие компоненты</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div> <!-- //.panel -->
+              <!-- 3 панель -->
+              <div class="panel panel-warning">
+                <!-- Bootstrap 3 - JavaScript -->
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">Bootstrap 3 - Java Script</a>
+                  </h4>
+                </div>
+                <div id="collapseThree" class="panel-collapse collapse">
+                  <!-- Содержимое 3 панели -->
+                  <div class="panel-body">
+                    <ul class="nav nav-pills nav-stacked">
+                      <li><a href="js_btn.html">Кнопки (btn)</a></li>
+                      <li><a href="js_dropdown.html">Выпадающие списки (dropdown)</a></li>
+                      <li><a href="js_tooltip.html">Всплывающие подсказки (tooltip)</a></li>
+                      <li><a href="js_popover.html">Всплывающие панели (popover)</a></li>
+                      <li><a href="js_alert.html">Уведомления (alert)</a></li>
+                      <li><a href="js_tab.html">Динамические вкладки (tab)</a></li>
+                      <li><a href="js_modal.html">Модальные окна (modal)</a></li>
+                      <li><a href="js_collapse.html">Аккордеон (collapse)</a></li>
+                      <li><a href="js_carousel.html">Карусель (carousel)</a></li>
+                      <li><a href="js_scrollspy.html">ScrollSpy</a></li>
+                      <li><a href="js_affix.html">Affix</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div> <!-- //.panel -->
+              <!-- 4 панель -->
+              <div class="panel panel-success">
+                <!-- Заголовок 4 панели -->
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">Bootstrap 3 - Разное</a>
+                  </h4>
+                </div>
+                <div id="collapseFour" class="panel-collapse collapse">
+                  <!-- Содержимое 4 панели -->
+                  <div class="panel-body">
+                    <ul class="nav nav-pills nav-stacked">
+                      <li><a href=""></a></li>
+                      <li><a href=""></a></li>
+                      <li><a href=""></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div> <!-- //.panel -->
+              <!-- 5 панель -->
+              <div class="panel panel-warning">
+
+                <!-- Заголовок 5 панели -->
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive">Bootstrap 3 - Готовые сниплеты</a>
+                  </h4>
+                </div>
+                <div id="collapseFive" class="panel-collapse collapse">
+                  <!-- Содержимое 5 панели -->
+                    <ul class="nav nav-pills nav-stacked">
+                      <li><a href="#">Статья 1</a></li>
+                      <li><a href="#">Статья 2</a></li>
+                      <li><a href="#">Статья 3</a></li>
+                    </ul>
+                </div>
+              </div> <!-- //.panel -->
+            </div> <!-- /.panel-group -->
+          </div> <!-- /panel-body -->
+        </div> <!-- /.panel -->
+      </aside>
+    </div> <!-- /.row -->
+  </main>	<!-- /.container --> 
+
+	<!-- подвал -->
+  <footer class="container-fluid text-center">
+    <div class="row">
+      <div class="col-sm-12">
+        <p>Данная страница создана исключительно с целью освоения темы автором. Материал для обучения был взят с сайта <a href="http://itchief.ru/lessons/bootstrap-3/">itchief.ru</a></p>
+      </div>
+    </div>
+  </footer> <!-- /.container-fluid -->
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="../../js/prettify.js" type="text/javascript"></script>
+  <script type="text/javascript">
+jQuery(function () {
+   $("pre").each(function () {
+      var that = $(this);
+      var old_html = that.html();
+      var new_html = old_html.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+      that.html(new_html);
+      if(that.hasClass('demo')) {that.after(old_html);}
+   });
+});
+</script>
+</body>
+</html>

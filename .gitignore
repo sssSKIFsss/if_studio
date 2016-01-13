@@ -1,0 +1,9 @@
+*.min.*
+*~
+tags
+todo
+.vim/session.vim
+.git/
+Tmp/
+
+

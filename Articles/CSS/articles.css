@@ -1,0 +1,46 @@
+@charset "utf-8";
+/* CSS Document */
+
+.prettyprint {
+  max-height:285px;
+}
+/* статьи - навигационная панель navbar */
+.articles-navbar .nav {
+	margin-right:0;
+}
+.articles-navbar .navbar-brand {
+  font-size:26px;
+}
+
+/* статьи - подвал footer */
+footer {
+  background-color: #EEE;
+  padding-top:10px;
+}
+footer a {
+  font-size:24px;
+  font-weight:bold;
+}
+
+/* статьи - Bootstrap - иконки */
+.icon-viewer {
+  display:inline-block;
+  padding:7px;
+  height:100px;
+  width:100px;
+  text-align:center;
+  vertical-align:top;
+}
+.icon-viewer__img {
+  font-size:24px;
+  vertical-align:top;
+}
+.icon-viewer__name {
+  font-size:12px;
+  text-align:center;
+  vertical-align:bottom;
+}
+.redtxt-redback {
+  color:#C10003;
+  background-color:#F7EEEF;
+}

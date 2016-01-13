@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>if-studio</title>
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <!-- Подключаем стили бутстрапа: -->
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+	<!-- Подключаем стили для подсветки кода: -->
+	<link type="text/css" rel="stylesheet" href="../../css/prettify.css">
+	<!-- Подключаем свои стили: -->
+	<link href="../../css/main.css" rel="stylesheet" type="text/css">
+	<link href="../css/articles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onload="prettyPrint()">
+	<!-- шапка и главное меню -->
+	<header class="container-fluid">   
+    <nav class="navbar navbar-default navbar-static-top articles-navbar">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mainNavbar">
+          <span class="sr-only">Навигатор</span>
+          <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../index.html"><strong>if(studio)</strong></a>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">HTML<span class="sr-only">(current)</span></a></li>
+          <li><a href="#">CSS</a></li>
+          <li><a href="#">JavaScript</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+              Frameworks<span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li class="active"><a href="#">Bootstrap</a></li>
+              <li><a href="#">Foundation</a></li>
+              <li class="divider"></li>
+              <li><a href="#">jQuery</a></li>
+            </ul>
+          </li>          
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+              CMS<span class="caret"></span> </a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">1С-Битрикс</a></li>
+              <li><a href="#">Joomla!</a></li>
+              <li><a href="#">Drupal</a></li>
+              <li><a href="#">Word Press</a></li>
+            </ul>
+          </li>
+        </ul> <!-- /.navbar-nav .navbar-right -->
+      </div>	<!-- /.navbar-collapse --> 
+    </nav> <!-- /.navbar-static-top -->
+  </header>	<!-- /.container-fluid -->     
+	
+  <!-- основное содержание -->
+  <main class="container">
+    <div class="row">
+      <article class="col-sm-12 col-md-8 col-lg-8">
+        <!-- хлебные крошки -->
+        <ol class="breadcrumb">
+          <li><a href="../../index.html">Главная</a></li>
+          <li><a href="index.html">Bootstrap</a></li>
+
+
+          <li class="active">Формы (часть 1)</li>
+        </ol>
+        <h2>Формы (часть 1)</h2>
+        <p><em>На этом уроке вы научитесь создавать формы с применением классов Twitter Bootstrap 3.</em></p>
+        <!-- Создание форм в Twitter Bootstrap -->
+        <section>
+          <h3>Создание форм в Twitter Bootstrap</h3>
+          <p>Платформа Twitter Bootstrap 3 содержит глобальные стили и классы, которые предназначены для оформления HTML форм и индивидуальных элементов управления. Глобальные стили представляют собой определённые CSS правила, которые определяют внешний вид элементов управления на веб-странице. Эти стили элементы управления получают автоматически, и веб-разработчику их явно задавать не требуется.</p>
+          <p>В Twitter Bootstrap 3 основная задача для веб-разработчика в основном сводится в добавлении необходимых классов для элементов управления, форм и контейнеров. Основные моменты при создании и оформлении формы представим в виде следующих этапов:</p>
+          <ul>
+            <li>указать вид формы. В Bootstrap 3 различают следующие виды форм: вертикальная (без добавления класса), горизонтальная (<span class="redtxt-redback">.form-horizontal</span>) и в одну строку (<span class="redtxt-redback">.form-inline</span>);</li>
+            <li>добавить к необходимым текстовым элементам управления <span class="redtxt-redback">&lt;input&gt;</span>, <span class="redtxt-redback">&lt;textarea&gt;</span>, <span class="redtxt-redback">&lt;select&gt;</span> класс <span class="redtxt-redback">.form-control</span>, чтобы установить им ширину, равную 100% (всю доступную ширину родительского элемента);</li>
+            <li>поместить каждую надпись (<span class="redtxt-redback">&lt;label&gt;</span>) и элемент управления в контейнер <span class="redtxt-redback">&lt;div&gt;</span> ... <span class="redtxt-redback">&lt;/div&gt;</span> с классом <span class="redtxt-redback">.form-group</span>. Это необходимо сделать, чтобы задать для элементов в форме оптимальные отступы.</li>
+          </ul>
+          <h4>Вертикальная форма (по умолчанию)</h4>
+          <p>Вертикальная форма - это макет формы, в которой её элементы распологаются вертикально, т.е. один под другим. Данная форма создаётся без добавления класса к элементу формы (<span class="redtxt-redback">&lt;form&gt;</span>). Метки и элементы управления формы необходимо размещать в блоке с классом <span class="redtxt-redback">.form-group</span>.</p>
+          <pre class="prettyprint linenums demo">
+<form style="background-color:#FDFCD0; padding:10px;">
+  <div class="form-group">
+    <label for="inputEmail">Адрес email:</label>
+    <input type="email" class="form-control" id="inputEmail" placeholder="Введите email">
+  </div>
+  <div class="form-group">
+    <label for="inputPassword">Пароль:</label>
+    <input type="password" class="form-control" id="inputPassword" placeholder="Введите пароль">
+  </div>
+  <div class="checkbox">
+    <label>
+      <input type="checkbox"> Запомнить
+    </label>
+  </div>
+  <button type="submit" class="btn btn-default">Войти</button>
+</form></pre>  
+          <h4>Горизонтальная форма (.form-horizontal)</h4>
+          <p>Горизонтальная форма - это форма, в которой надписи и элементы управления находящиеся в одной группе (<span class="redtxt-redback">&lt;div class="form-group"&gt;</span> ... <span class="redtxt-redback">&lt;/div&gt;</span>) располагаются на одной строке.</p>
+          <p>Принцип создания горизонтальной формы:</p>
+          <ul>
+            <li>добавить класс <span class="redtxt-redback">.form-horizontal</span> к элементу form;</li>
+            <li>поместить элементы формы, которые должны распологаться в одной строке, в контейнер <span class="redtxt-redback">&lt;div&gt;</span> ... <span class="redtxt-redback">&lt;/div&gt;</span> и добавить к нему класс <span class="redtxt-redback">.form-group</span></li>
+            <li>элементам, которые будут располагаться в одной строке, необходимо задать ширину с помощью классов системы сетки Twitter Bootstrap 3;</li>
+            <li>добавить класс <span class="redtxt-redback">.control-label</span> к элементам <span class="redtxt-redback">label</span>.</li>
+          </ul>
+          <pre class="prettyprint linenums demo">
+<form class="form-horizontal" style="background-color:#FDFCD0; padding:10px;">
+  <div class="form-group">
+    <label for="inputEmail1" class="col-xs-2 control-label">Адрес email:</label>
+    <div class="col-xs-10">
+      <input type="email" class="form-control" id="inputEmail1" placeholder="Введите email">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputPassword1" class="col-xs-2 control-label">Пароль:</label>
+    <div class="col-xs-10">
+      <input type="password" class="form-control" id="inputPassword1" placeholder="Введите пароль">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-xs-offset-2 col-xs-10">
+      <div class="checkbox">
+        <label><input type="checkbox"> Запомнить</label>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-xs-offset-2 col-xs-10">
+      <button type="submit" class="btn btn-default">Войти</button>
+    </div>
+  </div>
+</form></pre>  
+          <h4>Создание формы, с расположением элементов в одну строку</h4>
+          <p>Для создание формы с расположением элементов в одну строку, необходимо добавить Bootstrap класс <span class="redtxt-redback">.form-inline</span> к элементу <span class="redtxt-redback">&lt;form&gt;</span>. Такие формы можно создавать только для окон шириной не менее 768px.</p>
+          <pre class="prettyprint linenums demo">
+<form class="form-inline" style="background-color:#FDFCD0; padding:10px;">
+  <div class="form-group">
+    <label class="sr-only" for="inputEmail2">Email</label>
+    <input type="email" class="form-control" id="inputEmail2" placeholder="Email">
+  </div>
+  <div class="form-group">
+    <label class="sr-only" for="inputPassword2">Пароль</label>
+    <input type="password" class="form-control" id="inputPassword2" placeholder="Пароль">
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox"> Запомнить</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Войти</button>
+</form></pre>
+          <br/>
+          <div class="alert alert-warning">
+            <strong>Примечание:</strong> Вы можете скрывать элемент &lt;label&gt; с помощью класса .sr-only.
+          </div>         
+          <h4>Создание статических элементов управления формы</h4>
+          <p>Если вам нужно поместить обычный текст рядом с элементом <span class="redtxt-redback">&lt;label&gt;</span> в горизонтальной форме, то используйте класс <span class="redtxt-redback">.form-control-static</span> на элементе <span class="redtxt-redback">&lt;p&gt;</span>.</p>
+          <pre class="prettyprint linenums demo">
+<form class="form-horizontal" style="background-color:#FDFCD0; padding:10px;">
+  <div class="form-group">
+    <label class="control-label col-xs-2">Email</label>
+    <div class="col-xs-10">
+      <p class="form-control-static">admin@itchief.ru</p>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputPassword3" class="control-label col-xs-2">Пароль</label>
+    <div class="col-xs-10">
+      <input type="password" class="form-control" id="inputPassword3" placeholder="Пароль">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-xs-offset-2 col-xs-10">
+      <div class="checkbox">
+        <label><input type="checkbox"> Запомнить</label>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-xs-offset-2 col-xs-10">
+      <button type="submit" class="btn btn-primary">Войти</button>
+    </div>
+  </div>
+</form></pre>  
+        </section>
+        <!-- Дополнительные элементы управления Twitter Bootstrap -->
+        <section>
+          <h3>Создание элементов управления форм</h3>
+          <p>Bootstrap включает в себя некоторые полезные компоненты формы, которые позволяют сделать формы более привлекательными.</p>          
+          <h4>Создание элементов управления &lt;input&gt;</h4>
+          <p>Вы можете расширить элементы управления формы посредством добавления текста или кнопки перед или после элемента <span class="redtxt-redback">&lt;input&gt;</span>.</p>
+          <p>Для этого:</p>
+          <ul>
+            <li>Поместите текст или иконку внутри тега <span class="redtxt-redback">&lt;span&gt;</span>, имеющего класс <span class="redtxt-redback">.input-group-addon</span>. А затем контейнер <span class="redtxt-redback">&lt;span&gt;</span> поместите перед или после элемента <span class="redtxt-redback">&lt;input&gt;</span></li>
+            <li>Поместите элемент <span class="redtxt-redback">&lt;span&gt;</span> и элемент ввода <span class="redtxt-redback">&lt;input&gt;</span> внутри контейнера <span class="redtxt-redback">&lt;div&gt;</span> и примените к нему класс <span class="redtxt-redback">.input-group</span></li>
+          </ul>
+          <pre class="prettyprint linenums demo">
+<form style="background-color:#FDFCD0; padding:10px;">
+  <div class="input-group">
+    <span class="input-group-addon">@</span>
+    <input type="text" class="form-control" placeholder="Имя пользователя">
+  </div>
+  <br />
+  <div class="input-group">
+    <input type="text" class="form-control">
+    <span class="input-group-addon">.00</span>
+  </div>
+  <br />
+  <div class="input-group">
+    <span class="input-group-addon">$</span>
+    <input type="text" class="form-control">
+    <span class="input-group-addon">.00</span>
+  </div>
+</form></pre>
+          <p>Вы, так же, можете расширить элемент управления <span class="redtxt-redback">&lt;input&gt;</span>, поместив перед ним флажок или переключатель.</p>
+          <pre class="prettyprint linenums demo">
+<form style="background-color: #FDFCD0; padding:10px;">
+    <div class="row">
+        <div class="col-xs-6">
+          <div class="input-group">
+            <span class="input-group-addon">
+              <input type="checkbox">
+            </span>
+            <input type="text" class="form-control">
+          </div>
+        </div>
+        <div class="col-xs-6">
+          <div class="input-group">
+            <span class="input-group-addon">
+              <input type="radio">
+            </span>
+            <input type="text" class="form-control">
+          </div>
+        </div>
+      </div>
+</form></pre>  
+          <p>Кроме этого, Вы можете расширить элемент управления <span class="redtxt-redback">&lt;input&gt;</span>, поместив перед ним или после него кнопки. Кнопки необходимо заключить внутри контейнера <span class="redtxt-redback">&lt;span&gt;</span> и применить класс <span class="redtxt-redback">.input-group-btn</span> вместо <span class="redtxt-redback">.input-group-addon</span>.</p>
+          <pre class="prettyprint linenums demo">
+<form style="background-color: #FDFCD0; padding:10px;">
+  <div class="row">
+    <div class="col-xs-6">
+      <div class="input-group">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button">Вперед!</button>
+        </span>
+        <input type="text" class="form-control">
+      </div>
+    </div>
+    <div class="col-xs-6">
+      <div class="input-group">
+        <input type="text" class="form-control">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button">Вперед!</button>
+        </span>
+      </div>
+    </div>
+  </div>
+</form></pre>  
+          <h4>Создание кнопок, с выпадающим меню</h4>
+          <p>Вы можете также создать кнопки, с выпадающим меню.</p>
+          <pre class="prettyprint linenums demo">
+<form style="background-color: #FDFCD0; padding:10px;">
+  <div class="row">
+    <div class="col-xs-6">
+      <div class="input-group">
+        <div class="input-group-btn">
+          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+            Действие <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a href="#">Действие</a></li>
+            <li><a href="#">Другое действие</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Отдельная ссылка</a></li>
+          </ul>
+        </div>
+        <input type="text" class="form-control">
+      </div>
+    </div>
+    <div class="col-xs-6">
+      <div class="input-group">
+        <input type="text" class="form-control">
+        <div class="input-group-btn">
+          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+            Действие <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu pull-right">
+            <li><a href="#">Действие</a></li>
+            <li><a href="#">Другое действие</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Отдельная ссылка</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</form></pre>  
+          <h4>Создание группы кнопок, поделенных на сегменты</h4>
+          <p>Аналогично, вы можете создать группу кнопок, поделенную на сегменты, где кнопка, с выпадающим списком помещается отдельно от других кнопок.</p>
+          <pre class="prettyprint linenums demo">
+<form style="background-color: #FDFCD0; padding:10px;">
+  <div class="row">
+    <div class="col-xs-6">
+      <div class="input-group">
+        <div class="input-group-btn">
+          <button tabindex="-1" class="btn btn-default" type="button">Действие</button>
+          <button tabindex="-1" data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button">
+            <span class="caret"></span>
+            <span class="sr-only">Toggle Dropdown</span>
+          </button>
+          <ul class="dropdown-menu"> 
+            <li><a href="#">Действие</a></li>
+            <li><a href="#">Другое действие</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Отдельная сслыка</a></li>
+          </ul>
+        </div>
+        <input type="text" class="form-control">
+      </div>
+    </div>
+    <div class="col-xs-6">
+      <div class="input-group">
+        <input type="text" class="form-control">
+        <div class="input-group-btn">
+          <button tabindex="-1" class="btn btn-default" type="button">Действие</button>
+          <button tabindex="-1" data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button">
+            <span class="caret"></span>
+            <span class="sr-only">Toggle Dropdown</span>
+          </button>
+          <ul class="dropdown-menu pull-right">
+            <li><a href="#">Действие</a></li>
+            <li><a href="#">Другое действие</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Отдельная ссылка</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+</pre>  
+          <h4>Создание не активных элементов &lt;input&gt;</h4>
+          <p>Что бы создать элемент <span class="redtxt-redback">&lt;input&gt;</span> с не активным состоянием, необходимо добавить атрибут <span class="redtxt-redback">disabled</span> к этому элементу.</p>      
+          <pre class="prettyprint linenums demo">
+<form style="background-color: #FDFCD0; padding:10px;">
+  <input type="text" class="form-control" placeholder="Неактивный элемент" disabled="disabled">
+</form></pre>
+          <p>Подобным образом, Вы можете добавить атрибут "readonly" для элементов <span class="redtxt-redback">&lt;input&gt;</span>, чтобы создать элементы управления только для чтения. Он предотвращает ввод данных пользователем и имеет такой же стиль, что и элементы с неактивным состоянием.</p>
+          <pre class="prettyprint linenums demo">
+<form style="background-color: #FDFCD0; padding:10px;">
+  <input type="text" class="form-control" placeholder="Элемент только для чтения" readonly="readonly">
+</form></pre>
+          <h4>Создание группы неактивных элементов</h4>
+          <p>Для того чтобы не переводить состояния элементов формы по отдельности можно воспользоваться элементом <span class="redtxt-redback">&lt;fieldset&gt;</span>. Элемент <span class="redtxt-redback">&lt;fieldset&gt;</span> предназначен для группирования элементов формы. C помощью добавления атрибута disabled в элемент <span class="redtxt-redback">&lt;fieldset&gt;</span>, Bootstrap позволит перевести состояние всех элементов внутри этой группы в не активное состояние.</p>
+          <pre class="prettyprint linenums demo">
+<form class="form-horizontal" style="background-color: #FDFCD0; padding:10px;">
+  <fieldset disabled="disabled">
+    <div class="form-group">
+      <label for="inputEmail4" class="control-label col-xs-2">Email</label>
+      <div class="col-xs-10">
+        <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputPassword4" class="control-label col-xs-2">Пароль</label>
+      <div class="col-xs-10">
+        <input type="password" class="form-control" id="inputPassword4" placeholder="Пароль">
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-xs-offset-2 col-xs-10">
+        <div class="checkbox">
+          <label><input type="checkbox"> Запомнить</label>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-xs-offset-2 col-xs-10">
+        <button type="submit" class="btn btn-primary">Войти</button>
+      </div>
+    </div>
+  </fieldset>
+</form></pre>
+          <h4>Создание поясняющего текста к элементам управления</h4>
+          <pre class="prettyprint linenums demo">
+<form style="background-color: #FDFCD0; padding:10px;">
+  <input type="text" class="form-control">
+  <span class="help-block">Блок справочного текста, расположенный на новой строке. Может быть более одной строки.</span>
+</form></pre>
+        </section>
+        <!-- Изменение элементов форм в Twitter Bootstrap -->
+        <section>
+          <h3>Изменение элементов формы</h3>
+          <h4>Изменение размеров элементов &lt;input&gt;, &lt;textarea&gt;, &lt;select&gt; с помощью сетки Bootstrap 3</h4>
+          <p>Вы также можете изменить размеры элементов управления формы с помощью задания ширины, в виде количества колонок сетки Twitter Bootstrap. Для этого, необходимо поместить элементы управления формы (<span class="redtxt-redback">&lt;input&gt;</span>, <span class="redtxt-redback">&lt;textarea&gt</span>, <span class="redtxt-redback">&lt;select&gt</span>) в контейнер, или применить классы сеток Bootstrap 3 прямо на них.</p>
+          <pre class="prettyprint linenums demo">
+<form style="background-color: #FDFCD0; padding:10px;">
+  <div class="row">
+    <div class="col-xs-3">
+      <input type="text" class="form-control">
+    </div>
+    <div class="col-xs-4">
+      <input type="text" class="form-control">
+    </div>
+    <div class="col-xs-5">
+      <input type="text" class="form-control">
+    </div>
+  </div>
+  <br />
+  <div class="row">
+    <div class="col-xs-3">
+      <textarea class="form-control"></textarea>
+    </div>
+    <div class="col-xs-4">
+      <textarea class="form-control"></textarea>
+    </div>
+    <div class="col-xs-5">
+      <textarea class="form-control"></textarea>
+    </div>
+  </div>
+  <br />
+  <div class="row">
+    <div class="col-xs-3">
+      <select class="form-control">
+        <option>Выбор</option>
+      </select>
+    </div>
+    <div class="col-xs-4">
+      <select class="form-control">
+        <option>Выбор</option>
+      </select>
+    </div>
+    <div class="col-xs-5">
+      <select class="form-control">
+        <option>Выбор</option>
+      </select>
+    </div>
+  </div>
+</form></pre>  
+          <h4>Изменение высоты элементов &lt;input&gt; и &lt;select&gt;</h4>
+          <p>С помощью классов Bootstrap <span class="redtxt-redback">.input-lg</span> и <span class="redtxt-redback">.input-sm</span> Вы можете контролировать высоту элементов <span class="redtxt-redback">&lt;input&gt;</span> и <span class="redtxt-redback">&lt;select&gt;</span>.</p>
+          <pre class="prettyprint linenums demo">
+<form style="background-color: #FDFCD0; padding:10px;">
+  <div class="row">
+    <div class="col-xs-6">
+      <input type="text" class="form-control input-lg" placeholder="Большой">
+    </div>
+    <div class="col-xs-6">
+      <select class="form-control input-lg">
+        <option>Большой - 1</option>
+        <option>Большой - 2</option>
+      </select>
+    </div>
+  </div>
+  <br />
+  <div class="row">
+    <div class="col-xs-6">
+      <input type="text" class="form-control" placeholder="Средний">
+    </div>
+    <div class="col-xs-6">
+      <select class="form-control">
+        <option>Средний - 1</option>
+        <option>Средний - 2</option>
+      </select>
+    </div>
+  </div>
+  <br />
+  <div class="row">
+    <div class="col-xs-6">
+      <input type="text" class="form-control input-sm" placeholder="Маленький">
+    </div>
+    <div class="col-xs-6">
+      <select class="form-control input-sm">
+        <option>Маленький - 1</option>
+        <option>Маленький - 2</option>
+      </select>
+    </div>
+  </div>
+</form></pre>
+          <h4>Изменение размеров элементов, помещенных в контейнер с классом .input-group</h4>
+          <p>Вы можете также добавить классы, для изменения высоты элементов формы, помещенных в контейнер с классом <span class="redtxt-redback">.input-group</span>.</p>
+          <pre class="prettyprint linenums demo">
+<form  style="background-color:#FDFCD0; padding:10px;">
+  <div class="input-group input-group-lg">
+    <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+    <input type="text" class="form-control">
+  </div>
+  <br />
+  <div class="input-group">
+    <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+    <input type="text" class="form-control">
+  </div>
+  <br />
+  <div class="input-group input-group-sm">
+    <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+    <input type="text" class="form-control">
+  </div>
+</form>        
+</pre>        
+        </section> 
+
+        
+      </article>
+      <aside class="col-sm-12 col-md-4 col-lg-4">
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            <h3 class="panel-title">Содержание</h3>
+          </div>
+          <div class="panel-body">
+            <div class="panel-group" id="accordion">
+              <!-- 1 панель -->
+              <div class="panel panel-warning">
+                <!-- Заголовок 1 панели -->
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Bootstrap 3 - Основы</a>
+                  </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse in">
+                  <!-- Содержимое 1 панели -->
+                  <div class="panel-body">
+                    <ul class="nav nav-pills nav-stacked">
+                      <li><a href="index.html">Введение</a></li>
+                      <li><a href="work_start.html">Начало работы</a></li>
+                      <li><a href="grid-system.html">Система сеток</a></li>
+                      <li><a href="grid-work.html">Работа с элементами сетки</a></li>
+                      <li><a href="columns-shift.html">Перестановка колонок сетки</a></li>
+                      <li><a href="text-work.html">Работа с текстом</a></li>
+                      <li><a href="tables.html">Таблицы</a></li>
+                      <li><a href="lists.html">Списки</a></li>
+                      <li><a href="forms1.html">Формы (часть 1)</a></li>
+                      <li><a href="forms2.html">Формы (часть 2)</a></li>
+                      <li><a href="images.html">Изображения</a></li>
+                      <li><a href="classes.html">Вспомогательные Классы</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div> <!-- //.panel -->
+              <!-- 2 панель -->
+              <div class="panel panel-success">
+                <!-- Заголовок 2 панели -->
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Bootstrap 3 - Компоненты</a>
+                  </h4>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse">
+                  <!-- Содержимое 2 панели -->
+                  <div class="panel-body">
+                    <ul class="nav nav-pills nav-stacked">
+                      <li><a href="comp_icons.html">Иконки (glyphicon)</a></li>
+                      <li><a href="comp_awesome-icons.html">Иконки Awesome</a></li>
+                      <li><a href="comp_nav.html">Навигационная панель (nav)</a></li>
+                      <li><a href="comp_navbar.html">Навигационное меню (navbar)</a></li>
+                      <li><a href="comp_navbar-setting.html">Настройка компонента navbar</a></li>
+                      <li><a href="comp_breadcrumb.html">Навигационные цепочки (breadcrumb)</a></li>
+                      <li><a href="comp_pagination.html">Пагинация(pagination)</a></li>
+                      <li><a href="comp_label.html">Метки и значки (label/badge)</a></li>
+                      <li><a href="comp_jumbotron.html">Jumbotron</a></li>
+                      <li><a href="comp_progress.html">Индикаторы процессов (progress)</a></li>
+                      <li><a href="comp_panel.html">Панели (panel)</a></li>
+                      <li><a href="comp_callout.html">Выноски (Callout)</a></li>
+                      <li><a href="comp_media.html">Медиа-компонент (media)</a></li>
+                      <li><a href="comp_other.html">Другие компоненты</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div> <!-- //.panel -->
+              <!-- 3 панель -->
+              <div class="panel panel-warning">
+                <!-- Bootstrap 3 - JavaScript -->
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">Bootstrap 3 - Java Script</a>
+                  </h4>
+                </div>
+                <div id="collapseThree" class="panel-collapse collapse">
+                  <!-- Содержимое 3 панели -->
+                  <div class="panel-body">
+                    <ul class="nav nav-pills nav-stacked">
+                      <li><a href="js_btn.html">Кнопки (btn)</a></li>
+                      <li><a href="js_dropdown.html">Выпадающие списки (dropdown)</a></li>
+                      <li><a href="js_tooltip.html">Всплывающие подсказки (tooltip)</a></li>
+                      <li><a href="js_popover.html">Всплывающие панели (popover)</a></li>
+                      <li><a href="js_alert.html">Уведомления (alert)</a></li>
+                      <li><a href="js_tab.html">Динамические вкладки (tab)</a></li>
+                      <li><a href="js_modal.html">Модальные окна (modal)</a></li>
+                      <li><a href="js_collapse.html">Аккордеон (collapse)</a></li>
+                      <li><a href="js_carousel.html">Карусель (carousel)</a></li>
+                      <li><a href="js_scrollspy.html">ScrollSpy</a></li>
+                      <li><a href="js_affix.html">Affix</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div> <!-- //.panel -->
+              <!-- 4 панель -->
+              <div class="panel panel-success">
+                <!-- Заголовок 4 панели -->
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">Bootstrap 3 - Разное</a>
+                  </h4>
+                </div>
+                <div id="collapseFour" class="panel-collapse collapse">
+                  <!-- Содержимое 4 панели -->
+                  <div class="panel-body">
+                    <ul class="nav nav-pills nav-stacked">
+                      <li><a href=""></a></li>
+                      <li><a href=""></a></li>
+                      <li><a href=""></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div> <!-- //.panel -->
+              <!-- 5 панель -->
+              <div class="panel panel-warning">
+
+                <!-- Заголовок 5 панели -->
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive">Bootstrap 3 - Готовые сниплеты</a>
+                  </h4>
+                </div>
+                <div id="collapseFive" class="panel-collapse collapse">
+                  <!-- Содержимое 5 панели -->
+                    <ul class="nav nav-pills nav-stacked">
+                      <li><a href="#">Статья 1</a></li>
+                      <li><a href="#">Статья 2</a></li>
+                      <li><a href="#">Статья 3</a></li>
+                    </ul>
+                </div>
+              </div> <!-- //.panel -->
+            </div> <!-- /.panel-group -->
+          </div> <!-- /panel-body -->
+        </div> <!-- /.panel -->
+      </aside>
+    </div> <!-- /.row -->
+  </main>	<!-- /.container --> 
+
+	<!-- подвал -->
+  <footer class="container-fluid text-center">
+    <div class="row">
+      <div class="col-sm-12">
+        <p>Данная страница создана исключительно с целью освоения темы автором. Материал для обучения был взят с сайта <a href="http://itchief.ru/lessons/bootstrap-3/">itchief.ru</a></p>
+      </div>
+    </div>
+  </footer> <!-- /.container-fluid -->
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="../../js/prettify.js" type="text/javascript"></script>
+  <script type="text/javascript">
+jQuery(function () {
+   $("pre").each(function () {
+      var that = $(this);
+      var old_html = that.html();
+      var new_html = old_html.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+      that.html(new_html);
+      if(that.hasClass('demo')) {that.after(old_html);}
+   });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>if-studio</title>
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <!-- Подключаем стили бутстрапа: -->
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+	<!-- Подключаем стили для подсветки кода: -->
+	<link type="text/css" rel="stylesheet" href="../../css/prettify.css">
+	<!-- Подключаем свои стили: -->
+	<link href="../../css/main.css" rel="stylesheet" type="text/css">
+	<link href="../css/articles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onload="prettyPrint()">
+	<!-- шапка и главное меню -->
+	<header class="container-fluid">   
+    <nav class="navbar navbar-default navbar-static-top articles-navbar">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mainNavbar">
+          <span class="sr-only">Навигатор</span>
+          <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../index.html"><strong>if(studio)</strong></a>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">HTML<span class="sr-only">(current)</span></a></li>
+          <li><a href="#">CSS</a></li>
+          <li><a href="#">JavaScript</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+              Frameworks<span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li class="active"><a href="#">Bootstrap</a></li>
+              <li><a href="#">Foundation</a></li>
+              <li class="divider"></li>
+              <li><a href="#">jQuery</a></li>
+            </ul>
+          </li>          
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+              CMS<span class="caret"></span> </a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">1С-Битрикс</a></li>
+              <li><a href="#">Joomla!</a></li>
+              <li><a href="#">Drupal</a></li>
+              <li><a href="#">Word Press</a></li>
+            </ul>
+          </li>
+        </ul> <!-- /.navbar-nav .navbar-right -->
+      </div>	<!-- /.navbar-collapse --> 
+    </nav> <!-- /.navbar-static-top -->
+  </header>	<!-- /.container-fluid -->     
+	
+  <!-- основное содержание -->
+  <main class="container">
+    <div class="row">
+      <article class="col-sm-12 col-md-8 col-lg-8">
+        <!-- хлебные крошки -->
+        <ol class="breadcrumb">
+          <li><a href="../../index.html">Главная</a></li>
+          <li><a href="index.html">Bootstrap</a></li>
+
+
+
+
+
+
+
+          <li class="active">Работа с текстом</li>
+        </ol>
+        <h2>Работа с текстом</h2>
+        <p><em>На этой странице приведены основные классы Twitter Bootstrap 3, позволяющие создавать заголовки, абзацы, цитаты и пр.</em></p>
+        <!-- Создание заголовков -->
+        <section>
+          <h3>Создание заголовков</h3>
+          <p>В Twitter Bootstrap 3 доступны все HTML-заголовки от <span class="redtxt-redback">&lt;h1&gt;</span> до <span class="redtxt-redback">&lt;h6&gt;</span>. Вы также можете использовать классы от <span class="redtxt-redback">.h1</span> до <span class="redtxt-redback">.h6</span> на любые другие элементы веб-страницы, если вы хотите использовать такие же стили как в заголовках.</p>
+          <pre class="prettyprint linenums demo">
+<h1>h1. Заголовок Bootstrap</h1>
+<div class="h1">div.h1. Заголовок Bootstrap</div>
+<h2>h2. Заголовок Bootstrap</h2>
+<div class="h2">div.h2. Заголовок Bootstrap</div>
+<h3>h3. Заголовок Bootstrap</h3>
+<div class="h3">div.h3. Заголовок Bootstrap</div>
+<h4>h4. Заголовок Bootstrap</h4>
+<div class="h4">div.h4. Заголовок Bootstrap</div>
+<h5>h5. Заголовок Bootstrap</h5>
+<div class="h5">div.h5. Заголовок Bootstrap</div>
+<h6>h6. Заголовок Bootstrap</h6>
+<div class="h6">div.h6. Заголовок Bootstrap</div></pre>
+          <p>Более того, вы можете использовать теги <span class="redtxt-redback">&lt;small&gt;</span> или тег <span class="redtxt-redback">&lt;span&gt;</span> с классом <span class="redtxt-redback">.small</span> для создания дополнительного текста в любом заголовке, который будет меньше по размеру и светлее, чем основной текст.</p>
+          <pre class="prettyprint linenums demo">
+<h1>h1. Заголовок Bootstrap <small>Дополнительный текст</small></h1>
+<h2>h2. Заголовок Bootstrap <small>Дополнительный текст</small></h2>
+<h3>h3. Заголовок Bootstrap <small>Дополнительный текст</small></h3>
+<h4>h4. Заголовок Bootstrap <span class="small">Дополнительный текст</span></h4>
+<h5>h5. Заголовок Bootstrap <span class="small">Дополнительный текст</span></h5>
+<h6>h6. Заголовок Bootstrap <span class="small">Дополнительный текст</span></h6></pre>  
+          <p>Вы также можете сделать, чтобы заголовок <span class="redtxt-redback">&lt;h1&gt;</span> отображался иначе, чем остальные заголовки на странице, используя компонент с классом <span class="redtxt-redback">.page-header</span>. Кроме того, вы можете использовать тег <span class="redtxt-redback">&lt;small&gt;</span>, чтобы создать подтекст к Заголовку.</p>
+          <pre class="prettyprint linenums demo">
+<div class="page-header">
+    <h1>Заголовок <small>подтекст к заголовку</small></h1>
+</div></pre>
+        </section>
+        <!-- Создание абзацев -->
+        <section>
+          <h3>Создание абзацев</h3>
+          <p>По умолчанию основной размер шрифта (font-size) в Bootstrap — 14px, при высоте строки (line-height) 1.428. Эти параметры применяются к тегу <span class="redtxt-redback">&lt;body&gt;</span> и всем разделам. Кроме того, отступ снизу для абзацев <span class="redtxt-redback">&lt;p&gt;</span> составляет половину высоты строки (10px по умолчанию). Вы также можете сделать любой абзац выделенным, просто добавив к нему класс <span class="redtxt-redback">.lead</span>.</p>
+          <pre class="prettyprint linenums demo">
+<p>Так выглядит обычный абзац Twitter Bootstrap.</p>
+<p class="lead">Так выглядит абзац Twitter Bootstrap, выделенный с помощью класса .lead</p></pre>  
+          <p>Вы можете легко выровнять текст внутри абзаца и другие элементы, используя классы для выравнивания текста.</p>
+          <pre class="prettyprint linenums demo">
+<p class="text-left">Текст, выровненный по левому краю.</p>
+<p class="text-center">Текст, выровненный по центру.</p>
+<p class="text-right">Текст, выровненный по правому краю.</p>
+<p class="text-justify">Текст, выровненный по ширине.</p>
+<p class="text-nowrap">Текст, без выравнивания.</p></pre>  
+          <h4>Форматирование текста с помощью Twitter Bootstrap</h4>
+          <p>Вы можете свободно использовать теги форматирования текста, такие как <span class="redtxt-redback">&lt;strong&gt;</span>, <span class="redtxt-redback">&lt;i&gt;</span>, <span class="redtxt-redback">&lt;small&gt;</span>, чтобы выделить текст полужирным, курсивом, или уменьшить размер шрифта так же, как и в простом HTML.</p>
+          <pre class="prettyprint linenums demo">
+<p><b>Полужирное начертание текста</b></p>
+<p><big>Текст, с увеличенным размером шрифта</big></p>
+<p><code>Программный код</code></p>
+<p><em>Акцентированный текст (курсивное начертание)</em></p>
+<p><i>Курсивное начертание текста</i></p>
+<p><mark>Выделенный текст</mark></p>
+<p><small>Текст с уменьшенным размером шрифта</small></p>
+<p><strong>Акцентированный текст (жирное начертание)</strong></p>
+<p><sub>Нижний</sub> и <sup>верхний</sup> индексы текста</p>
+<p><ins>Этот тег используется для выделения текста, добавленного в новую версию документа(отображается подчеркнутым)</ins></p>
+<p><del>Этот тег используется для выделения текста, удаленного из документа (отображается как перечеркнутый)</del></p></pre>
+          <h4>Классы для задания регистра текста</h4>
+          <p>Вы также можете преобразовать текст в нижний или верхний регистр, или начинать каждое слово с прописных букв.</p>
+          <pre class="prettyprint linenums demo">
+<p class="text-lowercase">Машины должны работать. Люди должны думать.</p>
+<p class="text-uppercase">Машины должны работать. Люди должны думать.</p>
+<p class="text-capitalize">Машины должны работать. Люди должны думать.</p></pre>  
+          <h4>Вспомогательные классы для придания тексту дополнительной информации с помощью цвета</h4>
+          <p>Цвета - это мощный способ передачи важной информации в веб-дизайне. Bootstrap имеет несколько вспомогательных классов, которые могут быть использованы для придания тексту дополнительной информации. Например, зеленый цвет текста обозначает успех, оранжевый – предупреждение, красный - ошибки и т.д.</p>
+          <pre class="prettyprint linenums demo">
+<p class="text-muted">Приглушенный текст</p>
+<p class="text-primary">Важный текст</p>
+<p class="text-success">Текст успеха</p>
+<p class="text-info">Текст примечания</p>
+<p class="text-warning">Текст предупреждения</p>
+<p class="text-danger">Текст ошибки</p></pre>
+          <div class="alert alert-warning">
+            <strong>Примечание:</strong> Используя CSS свойство text-overflow избыточную часть текста можно заменить на многоточие  (...).
+          </div>         
+          <h4>Создание цитат</h4>
+          <p>Чтобы оформить любой HTML как цитату, заключите его в теги <span class="redtxt-redback">&lt;blockquote&gt;</span>. Для прямого цитирования рекомендуется <span class="redtxt-redback">&lt;p&gt;</span>.</p>
+          <pre class="prettyprint linenums demo">
+<blockquote>
+  <p>У моих детей, конечно, будет компьютер. Но первым делом они получат книги.</p>
+  <small><cite>Билл Гейтс</cite></small>
+</blockquote></pre>  
+<p>В качестве альтернативы вы можете выровнять цитату по правому краю, применяя класс <span class="redtxt-redback">.pull-right</span> к элементу <span class="redtxt-redback">&lt;blockquote&gt;</span>.</p>
+          <pre class="prettyprint linenums demo">
+<blockquote class="pull-right">
+  <p>У моих детей, конечно, будет компьютер. Но первым делом они получат книги.</p>
+  <small><cite>Билл Гейтс</cite></small>
+</blockquote></pre>  
+        </section>
+
+        
+        
+        
+        
+      </article>
+      <aside class="col-sm-12 col-md-4 col-lg-4">
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            <h3 class="panel-title">Содержание</h3>
+          </div>
+          <div class="panel-body">
+            <div class="panel-group" id="accordion">
+              <!-- 1 панель -->
+              <div class="panel panel-warning">
+                <!-- Заголовок 1 панели -->
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Bootstrap 3 - Основы</a>
+                  </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse in">
+                  <!-- Содержимое 1 панели -->
+                  <div class="panel-body">
+                    <ul class="nav nav-pills nav-stacked">
+                      <li><a href="index.html">Введение</a></li>
+                      <li><a href="work_start.html">Начало работы</a></li>
+                      <li><a href="grid-system.html">Система сеток</a></li>
+                      <li><a href="grid-work.html">Работа с элементами сетки</a></li>
+                      <li><a href="columns-shift.html">Перестановка колонок сетки</a></li>
+                      <li><a href="text-work.html">Работа с текстом</a></li>
+                      <li><a href="tables.html">Таблицы</a></li>
+                      <li><a href="lists.html">Списки</a></li>
+                      <li><a href="forms1.html">Формы (часть 1)</a></li>
+                      <li><a href="forms2.html">Формы (часть 2)</a></li>
+                      <li><a href="images.html">Изображения</a></li>
+                      <li><a href="classes.html">Вспомогательные Классы</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div> <!-- //.panel -->
+              <!-- 2 панель -->
+              <div class="panel panel-success">
+                <!-- Заголовок 2 панели -->
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Bootstrap 3 - Компоненты</a>
+                  </h4>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse">
+                  <!-- Содержимое 2 панели -->
+                  <div class="panel-body">
+                    <ul class="nav nav-pills nav-stacked">
+                      <li><a href="comp_icons.html">Иконки (glyphicon)</a></li>
+                      <li><a href="comp_awesome-icons.html">Иконки Awesome</a></li>
+                      <li><a href="comp_nav.html">Навигационная панель (nav)</a></li>
+                      <li><a href="comp_navbar.html">Навигационное меню (navbar)</a></li>
+                      <li><a href="comp_navbar-setting.html">Настройка компонента navbar</a></li>
+                      <li><a href="comp_breadcrumb.html">Навигационные цепочки (breadcrumb)</a></li>
+                      <li><a href="comp_pagination.html">Пагинация(pagination)</a></li>
+                      <li><a href="comp_label.html">Метки и значки (label/badge)</a></li>
+                      <li><a href="comp_jumbotron.html">Jumbotron</a></li>
+                      <li><a href="comp_progress.html">Индикаторы процессов (progress)</a></li>
+                      <li><a href="comp_panel.html">Панели (panel)</a></li>
+                      <li><a href="comp_callout.html">Выноски (Callout)</a></li>
+                      <li><a href="comp_media.html">Медиа-компонент (media)</a></li>
+                      <li><a href="comp_other.html">Другие компоненты</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div> <!-- //.panel -->
+              <!-- 3 панель -->
+              <div class="panel panel-warning">
+                <!-- Bootstrap 3 - JavaScript -->
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">Bootstrap 3 - Java Script</a>
+                  </h4>
+                </div>
+                <div id="collapseThree" class="panel-collapse collapse">
+                  <!-- Содержимое 3 панели -->
+                  <div class="panel-body">
+                    <ul class="nav nav-pills nav-stacked">
+                      <li><a href="js_btn.html">Кнопки (btn)</a></li>
+                      <li><a href="js_dropdown.html">Выпадающие списки (dropdown)</a></li>
+                      <li><a href="js_tooltip.html">Всплывающие подсказки (tooltip)</a></li>
+                      <li><a href="js_popover.html">Всплывающие панели (popover)</a></li>
+                      <li><a href="js_alert.html">Уведомления (alert)</a></li>
+                      <li><a href="js_tab.html">Динамические вкладки (tab)</a></li>
+                      <li><a href="js_modal.html">Модальные окна (modal)</a></li>
+                      <li><a href="js_collapse.html">Аккордеон (collapse)</a></li>
+                      <li><a href="js_carousel.html">Карусель (carousel)</a></li>
+                      <li><a href="js_scrollspy.html">ScrollSpy</a></li>
+                      <li><a href="js_affix.html">Affix</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div> <!-- //.panel -->
+              <!-- 4 панель -->
+              <div class="panel panel-success">
+                <!-- Заголовок 4 панели -->
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">Bootstrap 3 - Разное</a>
+                  </h4>
+                </div>
+                <div id="collapseFour" class="panel-collapse collapse">
+                  <!-- Содержимое 4 панели -->
+                  <div class="panel-body">
+                    <ul class="nav nav-pills nav-stacked">
+                      <li><a href=""></a></li>
+                      <li><a href=""></a></li>
+                      <li><a href=""></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div> <!-- //.panel -->
+              <!-- 5 панель -->
+              <div class="panel panel-warning">
+
+                <!-- Заголовок 5 панели -->
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive">Bootstrap 3 - Готовые сниплеты</a>
+                  </h4>
+                </div>
+                <div id="collapseFive" class="panel-collapse collapse">
+                  <!-- Содержимое 5 панели -->
+                    <ul class="nav nav-pills nav-stacked">
+                      <li><a href="#">Статья 1</a></li>
+                      <li><a href="#">Статья 2</a></li>
+                      <li><a href="#">Статья 3</a></li>
+                    </ul>
+                </div>
+              </div> <!-- //.panel -->
+            </div> <!-- /.panel-group -->
+          </div> <!-- /panel-body -->
+        </div> <!-- /.panel -->
+      </aside>
+    </div> <!-- /.row -->
+  </main>	<!-- /.container --> 
+
+	<!-- подвал -->
+  <footer class="container-fluid text-center">
+    <div class="row">
+      <div class="col-sm-12">
+        <p>Данная страница создана исключительно с целью освоения темы автором. Материал для обучения был взят с сайта <a href="http://itchief.ru/lessons/bootstrap-3/">itchief.ru</a></p>
+      </div>
+    </div>
+  </footer> <!-- /.container-fluid -->
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="../../js/prettify.js" type="text/javascript"></script>
+  <script type="text/javascript">
+jQuery(function () {
+   $("pre").each(function () {
+      var that = $(this);
+      var old_html = that.html();
+      var new_html = old_html.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+      that.html(new_html);
+      if(that.hasClass('demo')) {that.after(old_html);}
+   });
+});
+</script>
+</body>
+</html>

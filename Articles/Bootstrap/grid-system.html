@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>if-studio</title>
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <!-- Подключаем стили бутстрапа: -->
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+	<!-- Подключаем стили для подсветки кода: -->
+	<link type="text/css" rel="stylesheet" href="../../css/prettify.css">
+	<!-- Подключаем свои стили: -->
+	<link href="../../css/main.css" rel="stylesheet" type="text/css">
+	<link href="../css/articles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onload="prettyPrint()">
+	<!-- шапка и главное меню -->
+	<header class="container-fluid">   
+    <nav class="navbar navbar-default navbar-static-top articles-navbar">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mainNavbar">
+          <span class="sr-only">Навигатор</span>
+          <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../index.html"><strong>if(studio)</strong></a>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">HTML<span class="sr-only">(current)</span></a></li>
+          <li><a href="#">CSS</a></li>
+          <li><a href="#">JavaScript</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+              Frameworks<span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li class="active"><a href="#">Bootstrap</a></li>
+              <li><a href="#">Foundation</a></li>
+              <li class="divider"></li>
+              <li><a href="#">jQuery</a></li>
+            </ul>
+          </li>          
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+              CMS<span class="caret"></span> </a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">1С-Битрикс</a></li>
+              <li><a href="#">Joomla!</a></li>
+              <li><a href="#">Drupal</a></li>
+              <li><a href="#">Word Press</a></li>
+            </ul>
+          </li>
+        </ul> <!-- /.navbar-nav .navbar-right -->
+      </div>	<!-- /.navbar-collapse --> 
+    </nav> <!-- /.navbar-static-top -->
+  </header>	<!-- /.container-fluid -->     
+	
+  <!-- основное содержание -->
+  <main class="container">
+    <div class="row">
+      <article class="col-sm-12 col-md-8 col-lg-8">
+        <!-- хлебные крошки -->
+        <ol class="breadcrumb">
+          <li><a href="../../index.html">Главная</a></li>
+          <li><a href="index.html">Bootstrap</a></li>
+
+
+
+
+
+
+
+          <li class="active">Система сеток</li>
+        </ol>
+        <h2>Система сеток</h2>
+        <p><em>Система сеток Twitter Bootstrap 3 - это быстрый и легкий путь для создания макета сайта.</em></p>
+        <!-- Описание системы сеток Twitter Bootstrap 3 -->
+        <section>
+          <h3>Описание системы сеток Twitter Bootstrap 3</h3>
+          <p>Сетки Bootstrap применяют при разработке макетов веб-страниц и для создания разметки блоков, в которых необходимо обеспечить правильное расположение элементов. Разрабатывать сетку начинают с блока <span class="redtxt-redback">.container</span>, в контейнер помещают блок <span class="redtxt-redback">.row</span> в который уже вставлюят колонки <span class="redtxt-redback">.col</span></p>
+          <h4>Контейнер .container</h4>
+          <p>Контейнеры различаются на блоки с фиксированой и плавающей шириной</p>
+          <p>Контейнер с фиксированной шириной (&lt;div class="container"&gt;…&lt;/div&gt;) имеет строго определенную ширину, которая изменяется при изменении ширины рабочей области окна браузера и ориентируется в горизонтальном направлении по центру, с помощью свойств <span class="redtxt-redback">margin-left:auto</span> и <span class="redtxt-redback">margin-right:auto</span>. Также, контейнер задает внутренние отступы слева и справа по 15рх (<span class="redtxt-redback">padding-left:15px</span> и <span class="redtxt-redback">padding-right:15px</span>) для содержимого, которое в него помещено.</p>
+          <table class="table table-bordered">
+            <thead>
+              <tr class="info">
+                <th>Ширина контейнера (.container)</th>
+                <th>Ширина рабочей области окна браузера</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1170px</td>
+                <td>Больше или равна 1200px</td>
+              </tr>
+              <tr>
+                <td>970px</td>
+                <td>Больше или равна 992px и меньше 1200px</td>
+              </tr>
+              <tr>
+                <td>750px</td>
+                <td>Больше или равна 768px и меньше 992px</td>
+              </tr>
+              <tr>
+                <td>Ширина контейнера равна ширине рабочей области окна браузера</td>
+                <td>Меньше 768px</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>Контейнер с плавающей шириной (&lt;div class="container-fluid"&gt;…&lt;/div&gt;) занимает всю ширину окна браузера и задает внутренние отступы слева и справа по 15рх (<span class="redtxt-redback">padding-left:15px</span> и <span class="redtxt-redback">padding-right:15px</span>) для содержимого, которое в него помещено.</p>
+          <h4>Ряд .row</h4>
+          <p>Следующим этапом является размещение рядов (блоки div с классом .row) внутри контейнера. Ширина рядов (&lt;div class="row"&gt;…&lt;/div&gt;) будет равна ширине контейнера, т.к. данный блок имеет отрицательные внешние отступы слева и справа по 15рх (<span class="redtxt-redback">margin-left:-15px</span> и <span class="redtxt-redback">margin-right:-15px</span>).</p>
+          <h4>Колонки .col</h4>
+          <p>Внутри ряда помещаются блоки с классом col-*-*, внутри которых размещается содержимое или другие ряды. Ширина блоков с классом col-*-* задаётся в относительной форме с помощью указания количества колонок Bootstrap. Так как ряд в Bootstrap по умолчанию состоит из 12 колонок, то минимальная ширина блока col-*-* равна одной колонке Bootstrap, а максимальная ширина блока col-*-* равна 12 колонкам Bootstrap. Например, если мы хотим создать в ряду 3 блока с одинаковой шириной, то нам необходимо установить ширину этих блоков равным 4 колонкам Bootstrap (&lt;div class="col-*-4"&gt;...&lt;/div&gt;).</p>
+          <h4>Система сеток под различные устройства</h4>
+          <p>Для создания макетов веб-страниц под различные устройства (смартфоны, планшеты, ноутбуки и персональные компьютеры) необходимо воспользоваться предопределенными классами сеток Twitter Bootstrap 3.</p>
+          <p>Например, вы можете использовать класс <span class="redtxt-redback">.col-xs-*</span> для создания сетки для устройств с маленьким экраном, таких как смартфоны. Точно так же класс <span class="redtxt-redback">.col-sm-*</span> - для устройств с небольшим экраном, таких как планшеты, класс .col-md-* – для устройств с экраном средних размеров, таких как персональные компьютеры и ноутбуки, а так же,  класс <span class="redtxt-redback">.col-lg-*</span> - для устройств с большим экраном.</p>
+          <p>Следующая таблица обобщает некоторые ключевые особенности новой системы сеток Bootstrap 3.</p>
+          <table class="table table-bordered">
+            <thead>
+              <tr class="info">
+                <th>Особенности системы сеток Bootstrap 3</th>
+                <th>Крохотная ширина экрана Смартфоны (&lt;768px)</th>
+                <th>Маленькая ширина экрана Планшеты (≥768px и &lt;992)</th>
+                <th>Средняя ширина экрана Ноутбуки (≥992px и &lt;1200px)</th>
+                <th>Большая ширина экрана Компьютеры (≥1200px)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Ширина контейнера фиксированного макета (<span class="redtxt-redback">.container</span>)</td>
+                <td>Равна ширине рабочей области окна браузера</td>
+                <td>750px</td>
+                <td>970px</td>
+                <td>1170px</td>
+              </tr>
+              <tr>
+                <td>Ширина контейнера плавающего макета (.container-fluid)</td>
+                <td colspan="4">Равна ширине рабочей области окна браузера</td>
+              </tr>
+              <tr>
+                <td>Префикс класса</td>
+                <td>.col-xs-</td>
+                <td>.col-sm-</td>
+                <td>.col-md-</td>
+                <td>.col-lg-</td>
+              </tr>
+              <tr>
+                <td>Максимальная ширина колонки Bootstrap для контейнера с фиксированной шириной (.container)</td>
+                <td>Ширине рабочей области окна браузера / 12</td>
+                <td>~62px (750px / 12)</td>
+                <td>~81px (970px / 12)</td>
+                <td>~97px (1170px / 12)</td>
+              </tr>
+              <tr>
+                <td>Максимальная ширина колонки Bootstrap для контейнера с плавающей шириной (.container-fluid)</td>
+                <td colspan="4">Ширине рабочей области окна браузера / 12</td>
+              </tr>
+              <tr>
+                <td>Внутренние отступы для содержимого блоков, состоящих из колонок Bootstrap</td>
+                <td colspan="4">15px с левой и правой стороны блока</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="alert alert-warning">
+            <strong>Примечание:</strong> Если вы применяете класс <span class="redtxt-redback">.col-sm-*</span> к блоку, то это повлияет не только на разметку для устройств, с маленьким экраном (планшеты), но также на устройства со средним и большим экранами, если Вы не указали классы <span class="redtxt-redback">.col-md-*</span> и <span class="redtxt-redback">.col-lg-*</span>. Аналогично, класс <span class="redtxt-redback">.col-md-*</span> будет влиять на разметку не только для устройств со средним экраном, но и на устройства с большим экраном, если класс <span class="redtxt-redback">.col-lg-*</span> не указан.
+          </div>          
+        </section>
+        <!-- Создание макета сайта с помощью системы сеток Twitter Bootstrap 3 -->
+        <section>
+          <h3>Создание макета сайта с помощью системы сеток Twitter Bootstrap 3</h3>
+          <p>С системой сеток Twitter Bootstrap 3 можно легко контролировать отображение макета сайта на различных устройствах, которые имеют различную ширину экрана.</p>
+          <p>В качестве примера рассмотрим процесс разработки макета сайта, состоящего из 3 блоков для всех устройств. Разрабатываемый макет на различных устройствах (смартфоны, планшеты, ноутбуки, персональные компьютеры) будет выглядеть по-разному. Например, на смартфонах эти блоки располагаются вертикально, а на большом экране персонального компьютера они размещаются горизонтально. То есть наш макет будет автоматически изменяться при достижении предельных значений ширины окна браузера.</p>
+          <p>Макет страницы для устройств с разными экранами может иметь следующий вид:</p>
+          <pre class="prettyprint linenums">
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6 col-md-8 col-sm-12 col-xs-12" style="height:300px; background:green;">Блок №1</div>
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" style="height:100px; background:orange;">Блок №2</div>
+    <div class="clearfix visible-md-block"></div>
+    <div class="col-lg-3 col-md-12 col-sm-6 col-xs-12" style="height:150px; background:blue;">Блок №3</div>
+  </div>
+</div></pre>  
+          <div class="alert alert-warning">
+            <strong>Примечание:</strong> Для устройств с очень маленькой шириной экрана (&lt;768px) блоки по умолчанию всегда занимают всю ширину рабочей области экрана (col-xs-12) и располагаются один под другим. Настраивать макет для таких устройств имеет смысл, если макет отличается от вышесказанного.
+          </div>
+          <p>С учетом правил отображения блоков на крохотных экранах макет страницы можно переписать так:</p>
+          <pre class="prettyprint linenums">
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6 col-md-8 col-sm-12" style="height:300px; background:green;">Блок №1</div>
+    <div class="col-lg-3 col-md-4 col-sm-6" style="height:100px; background:orange;">Блок №2</div>
+    <div class="clearfix visible-md-block"></div>
+    <div class="col-lg-3 col-md-12 col-sm-6" style="height:150px; background:blue;">Блок №3</div>
+  </div>
+</div></pre>  
+        </section>
+
+        
+        
+        
+        
+      </article>
+      <aside class="col-sm-12 col-md-4 col-lg-4">
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            <h3 class="panel-title">Содержание</h3>
+          </div>
+          <div class="panel-body">
+            <div class="panel-group" id="accordion">
+              <!-- 1 панель -->
+              <div class="panel panel-warning">
+                <!-- Заголовок 1 панели -->
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Bootstrap 3 - Основы</a>
+                  </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse in">
+                  <!-- Содержимое 1 панели -->
+                  <div class="panel-body">
+                    <ul class="nav nav-pills nav-stacked">
+                      <li><a href="index.html">Введение</a></li>
+                      <li><a href="work_start.html">Начало работы</a></li>
+                      <li><a href="grid-system.html">Система сеток</a></li>
+                      <li><a href="grid-work.html">Работа с элементами сетки</a></li>
+                      <li><a href="columns-shift.html">Перестановка колонок сетки</a></li>
+                      <li><a href="text-work.html">Работа с текстом</a></li>
+                      <li><a href="tables.html">Таблицы</a></li>
+                      <li><a href="lists.html">Списки</a></li>
+                      <li><a href="forms1.html">Формы (часть 1)</a></li>
+                      <li><a href="forms2.html">Формы (часть 2)</a></li>
+                      <li><a href="images.html">Изображения</a></li>
+                      <li><a href="classes.html">Вспомогательные Классы</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div> <!-- //.panel -->
+              <!-- 2 панель -->
+              <div class="panel panel-success">
+                <!-- Заголовок 2 панели -->
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Bootstrap 3 - Компоненты</a>
+                  </h4>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse">
+                  <!-- Содержимое 2 панели -->
+                  <div class="panel-body">
+                    <ul class="nav nav-pills nav-stacked">
+                      <li><a href="comp_icons.html">Иконки (glyphicon)</a></li>
+                      <li><a href="comp_awesome-icons.html">Иконки Awesome</a></li>
+                      <li><a href="comp_nav.html">Навигационная панель (nav)</a></li>
+                      <li><a href="comp_navbar.html">Навигационное меню (navbar)</a></li>
+                      <li><a href="comp_navbar-setting.html">Настройка компонента navbar</a></li>
+                      <li><a href="comp_breadcrumb.html">Навигационные цепочки (breadcrumb)</a></li>
+                      <li><a href="comp_pagination.html">Пагинация(pagination)</a></li>
+                      <li><a href="comp_label.html">Метки и значки (label/badge)</a></li>
+                      <li><a href="comp_jumbotron.html">Jumbotron</a></li>
+                      <li><a href="comp_progress.html">Индикаторы процессов (progress)</a></li>
+                      <li><a href="comp_panel.html">Панели (panel)</a></li>
+                      <li><a href="comp_callout.html">Выноски (Callout)</a></li>
+                      <li><a href="comp_media.html">Медиа-компонент (media)</a></li>
+                      <li><a href="comp_other.html">Другие компоненты</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div> <!-- //.panel -->
+              <!-- 3 панель -->
+              <div class="panel panel-warning">
+                <!-- Bootstrap 3 - JavaScript -->
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">Bootstrap 3 - Java Script</a>
+                  </h4>
+                </div>
+                <div id="collapseThree" class="panel-collapse collapse">
+                  <!-- Содержимое 3 панели -->
+                  <div class="panel-body">
+                    <ul class="nav nav-pills nav-stacked">
+                      <li><a href="js_btn.html">Кнопки (btn)</a></li>
+                      <li><a href="js_dropdown.html">Выпадающие списки (dropdown)</a></li>
+                      <li><a href="js_tooltip.html">Всплывающие подсказки (tooltip)</a></li>
+                      <li><a href="js_popover.html">Всплывающие панели (popover)</a></li>
+                      <li><a href="js_alert.html">Уведомления (alert)</a></li>
+                      <li><a href="js_tab.html">Динамические вкладки (tab)</a></li>
+                      <li><a href="js_modal.html">Модальные окна (modal)</a></li>
+                      <li><a href="js_collapse.html">Аккордеон (collapse)</a></li>
+                      <li><a href="js_carousel.html">Карусель (carousel)</a></li>
+                      <li><a href="js_scrollspy.html">ScrollSpy</a></li>
+                      <li><a href="js_affix.html">Affix</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div> <!-- //.panel -->
+              <!-- 4 панель -->
+              <div class="panel panel-success">
+                <!-- Заголовок 4 панели -->
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">Bootstrap 3 - Разное</a>
+                  </h4>
+                </div>
+                <div id="collapseFour" class="panel-collapse collapse">
+                  <!-- Содержимое 4 панели -->
+                  <div class="panel-body">
+                    <ul class="nav nav-pills nav-stacked">
+                      <li><a href=""></a></li>
+                      <li><a href=""></a></li>
+                      <li><a href=""></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div> <!-- //.panel -->
+              <!-- 5 панель -->
+              <div class="panel panel-warning">
+
+                <!-- Заголовок 5 панели -->
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive">Bootstrap 3 - Готовые сниплеты</a>
+                  </h4>
+                </div>
+                <div id="collapseFive" class="panel-collapse collapse">
+                  <!-- Содержимое 5 панели -->
+                    <ul class="nav nav-pills nav-stacked">
+                      <li><a href="#">Статья 1</a></li>
+                      <li><a href="#">Статья 2</a></li>
+                      <li><a href="#">Статья 3</a></li>
+                    </ul>
+                </div>
+              </div> <!-- //.panel -->
+            </div> <!-- /.panel-group -->
+          </div> <!-- /panel-body -->
+        </div> <!-- /.panel -->
+      </aside>
+    </div> <!-- /.row -->
+  </main>	<!-- /.container --> 
+
+	<!-- подвал -->
+  <footer class="container-fluid text-center">
+    <div class="row">
+      <div class="col-sm-12">
+        <p>Данная страница создана исключительно с целью освоения темы автором. Материал для обучения был взят с сайта <a href="http://itchief.ru/lessons/bootstrap-3/">itchief.ru</a></p>
+      </div>
+    </div>
+  </footer> <!-- /.container-fluid -->
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="../../js/prettify.js" type="text/javascript"></script>
+  <script type="text/javascript">
+jQuery(function () {
+   $("pre").each(function () {
+      var that = $(this);
+      var old_html = that.html();
+      var new_html = old_html.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+      that.html(new_html);
+      if(that.hasClass('demo')) {that.after(old_html);}
+   });
+});
+</script>
+</body>
+</html>

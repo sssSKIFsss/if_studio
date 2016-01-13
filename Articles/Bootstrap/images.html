@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>if-studio</title>
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <!-- Подключаем стили бутстрапа: -->
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+	<!-- Подключаем стили для подсветки кода: -->
+	<link type="text/css" rel="stylesheet" href="../../css/prettify.css">
+	<!-- Подключаем свои стили: -->
+	<link href="../../css/main.css" rel="stylesheet" type="text/css">
+	<link href="../css/articles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onload="prettyPrint()">
+	<!-- шапка и главное меню -->
+	<header class="container-fluid">   
+    <nav class="navbar navbar-default navbar-static-top articles-navbar">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mainNavbar">
+          <span class="sr-only">Навигатор</span>
+          <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../../index.html"><strong>if(studio)</strong></a>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">HTML<span class="sr-only">(current)</span></a></li>
+          <li><a href="#">CSS</a></li>
+          <li><a href="#">JavaScript</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+              Frameworks<span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li class="active"><a href="#">Bootstrap</a></li>
+              <li><a href="#">Foundation</a></li>
+              <li class="divider"></li>
+              <li><a href="#">jQuery</a></li>
+            </ul>
+          </li>          
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+              CMS<span class="caret"></span> </a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">1С-Битрикс</a></li>
+              <li><a href="#">Joomla!</a></li>
+              <li><a href="#">Drupal</a></li>
+              <li><a href="#">Word Press</a></li>
+            </ul>
+          </li>
+        </ul> <!-- /.navbar-nav .navbar-right -->
+      </div>	<!-- /.navbar-collapse --> 
+    </nav> <!-- /.navbar-static-top -->
+  </header>	<!-- /.container-fluid -->     
+	
+  <!-- основное содержание -->
+  <main class="container">
+    <div class="row">
+      <article class="col-sm-12 col-md-8 col-lg-8">
+        <!-- хлебные крошки -->
+        <ol class="breadcrumb">
+          <li><a href="../../index.html">Главная</a></li>
+          <li><a href="index.html">Bootstrap</a></li>
+
+
+
+
+
+          <li class="active">Изображения</li>
+        </ol>
+        <h2>Изображения</h2>
+        <p><em>Статья в которой рассматриваются классы, которые предоставляет платформа Twitter Bootstrap 3 и 4, для работы с изображениями.</em></p>
+        <!-- Что такое адаптивное изображение? -->
+        <section>
+          <h3>Что такое адаптивное изображение?</h3>
+          <p>Адаптивное изображение - это изображение, которое подстраивается под ширину элемента, в котором оно расположено. Т.е. оно отвечает следующим условиям:</p>
+          <ul>
+            <li>если ширина изображения меньше ширины элемента, в котором оно расположено, то размеры этого изображения не изменяются;</li>
+            <li>если ширина изображения больше ширины элемента, в котором оно расположено, то ширина изображения приравнивается к доступной ширине родительского элемента. При этом высота данного изображения уменьшается пропорционально относительно его ширины.</li>
+          </ul>
+        </section>
+        <!-- Как сделать изображение адаптивным -->
+        <section>
+          <h3>Как сделать изображение адаптивным</h3>
+          <p>Придание изображению адаптивности в Twitter Bootstrap 3 и 4 осуществляется посредством добавления класса <span class="redtxt-redback">.img-responsive</span> к тегу <span class="redtxt-redback">img</span>. Данный класс применяет к изображению CSS свойства <span class="redtxt-redback">max-width:100%</span> и <span class="redtxt-redback">height:auto</span>.</p>
+          <pre class="prettyprint linenums">
+<img src="..." class="img-responsive"></pre>
+          <p>Если необходимо сделать адаптивными сразу все изображения, расположенные на странице или в некотором блоке, то для этого необходимо воспользоваться одним из нижепредставленных правил CSS:</p>
+          <pre class="prettyprint linenums">
+    /* 1 Способ - Придать адаптивность всем изображениям. При этом данные изображения будут себя ввести как строчно-блочные элементы (inline-block) */
+    img {
+      display: inline-block;
+      height: auto;
+      max-width: 100%;
+    }
+    /* 2 Способ - Придать адаптивность всем изображениям. При этом данные изображения будут себя ввести как блочные элементы (block) */
+    img {
+      display: block;
+      height: auto;
+      max-width: 100%;
+    }
+    /* 3 Способ - Придать адаптивность всем изображениям, расположенных в элементе с id="main". При этом данные изображения будут себя ввести как блочные элементы (block) */
+    #main img {
+      display: block;
+      height: auto;
+      max-width: 100%;
+    }
+</pre>
+          <p>Данное правило необходимо добавить в CSS файл, который должен быть подключен после файла bootstrap.css.</p>
+        </section>
+        <!-- Как изменить форму изображения -->
+        <section>
+          <h3>Как изменить форму изображения</h3>
+          <p>В Twitter Bootstrap 3 и 4 можно с помощью соответствующих классов сделать изображение с закругленными углами (<span class="redtxt-redback">.img-rounded</span>), заключить его в рамку (<span class="redtxt-redback">.img-thumbnail</span>) или придать ему форму круга (<span class="redtxt-redback">.img-circle</span>).</p>
+          <pre class="prettyprint linenums demo">
+<div class="row">
+  <div class="col-sm-4">
+    <h3 class="text-center">img-rounded</h3>
+    <img src="img/ft630.jpg" alt="слоник" class="img-rounded img-responsive">
+  </div>
+  <div class="col-sm-4">
+    <h3 class="text-center">img-circle</h3>
+    <img src="img/ft630.jpg" alt="слоник" class="img-circle img-responsive">
+  </div>
+  <div class="col-sm-4">
+    <h3 class="text-center">img-thumbnail</h3>
+    <img src="img/ft630.jpg" alt="слоник" class="img-thumbnail img-responsive">
+  </div>
+</div></pre>
+        </section>
+        <!-- Как изменить расположение изображения -->
+        <section>
+          <h3>Как изменить расположение изображения</h3>
+          <p>Изменить расположение изображения в Twitter Bootstrap можно с помощью вспомогательных классов float (<span class="redtxt-redback">.pull-left</span> и <span class="redtxt-redback">.pull-right</span>), класса <span class="redtxt-redback">.center-block</span> и классов для выравнивания текста (<span class="redtxt-redback">.text-left</span>, <span class="redtxt-redback">.text-center</span> и <span class="redtxt-redback">.text-right</span>).</p>
+          <div class="alert alert-warning">
+            <strong>Внимание:</strong> Классы .pull-left, .pull-right и .center-block могут применяться для выравнивания изображений, которые ведут себя как блочные (block) или строчно-блочные (inline-block) элементы. После их применения изображения становится блочными.
+Классы .text-left, .text-center и .text-right могут быть использованы только для изменения расположения изображений, которые ведут себя как строчно-блочные (inline-block) элементы.
+          </div> 
+          <pre class="prettyprint linenums demo">
+<img class="pull-left" src="img/ft630.jpg" alt="слоненок" style="width:200px;">
+<img class="pull-right" src="img/ft630.jpg" alt="слоненок" style="width:200px;">
+<img class="center-block" src="img/ft630.jpg" alt="слоненок" style="width:200px;">
+<h5 class="pull-left">pull-left</h5>  
+<h5 class="pull-right">pull-right</h5>  
+<h5 class="text-center">center-block</h5>  
+<div class="text-left">
+  <img src="img/ft630.jpg" alt="слоненок" style="width:200px;">
+  <h5 class="text-left">text-left</h5>  
+</div>
+<div class="text-center">
+  <img src="img/ft630.jpg" alt="слоненок" style="width:200px;"></div>
+  <h5 class="text-center">text-center</h5>  
+<div class="text-right">
+  <img src="img/ft630.jpg"alt="слоненок" style="width:200px;">
+  <h5 class="text-right">text-right</h5>  
+</div></pre>
+        </section>
+        
+        <!--  -->
+        <section>
+          <h3></h3>
+          <p></p>
+          <span class="redtxt-redback"></span>
+          
+          <table class="table table-bordered">
+            <thead>
+              <tr class="danger">
+                <th></th>
+                <th></th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          
+          <div class="alert alert-warning">
+            <strong>Примечание:</strong>Бла-бла-бла.
+          </div>         
+          
+          <pre class="prettyprint linenums demo">
+          style="background-color: #FDFCD0; padding:10px;"
+          </pre>
+        </section>
+
+        
+        
+        
+        
+      </article>
+      <aside class="col-sm-12 col-md-4 col-lg-4">
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            <h3 class="panel-title">Содержание</h3>
+          </div>
+          <div class="panel-body">
+            <div class="panel-group" id="accordion">
+              <!-- 1 панель -->
+              <div class="panel panel-warning">
+                <!-- Заголовок 1 панели -->
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Bootstrap 3 - Основы</a>
+                  </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse in">
+                  <!-- Содержимое 1 панели -->
+                  <div class="panel-body">
+                    <ul class="nav nav-pills nav-stacked">
+                      <li><a href="index.html">Введение</a></li>
+                      <li><a href="work_start.html">Начало работы</a></li>
+                      <li><a href="grid-system.html">Система сеток</a></li>
+                      <li><a href="grid-work.html">Работа с элементами сетки</a></li>
+                      <li><a href="columns-shift.html">Перестановка колонок сетки</a></li>
+                      <li><a href="text-work.html">Работа с текстом</a></li>
+                      <li><a href="tables.html">Таблицы</a></li>
+                      <li><a href="lists.html">Списки</a></li>
+                      <li><a href="forms1.html">Формы (часть 1)</a></li>
+                      <li><a href="forms2.html">Формы (часть 2)</a></li>
+                      <li><a href="images.html">Изображения</a></li>
+                      <li><a href="classes.html">Вспомогательные Классы</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div> <!-- //.panel -->
+              <!-- 2 панель -->
+              <div class="panel panel-success">
+                <!-- Заголовок 2 панели -->
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Bootstrap 3 - Компоненты</a>
+                  </h4>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse">
+                  <!-- Содержимое 2 панели -->
+                  <div class="panel-body">
+                    <ul class="nav nav-pills nav-stacked">
+                      <li><a href="comp_icons.html">Иконки (glyphicon)</a></li>
+                      <li><a href="comp_awesome-icons.html">Иконки Awesome</a></li>
+                      <li><a href="comp_nav.html">Навигационная панель (nav)</a></li>
+                      <li><a href="comp_navbar.html">Навигационное меню (navbar)</a></li>
+                      <li><a href="comp_navbar-setting.html">Настройка компонента navbar</a></li>
+                      <li><a href="comp_breadcrumb.html">Навигационные цепочки (breadcrumb)</a></li>
+                      <li><a href="comp_pagination.html">Пагинация(pagination)</a></li>
+                      <li><a href="comp_label.html">Метки и значки (label/badge)</a></li>
+                      <li><a href="comp_jumbotron.html">Jumbotron</a></li>
+                      <li><a href="comp_progress.html">Индикаторы процессов (progress)</a></li>
+                      <li><a href="comp_panel.html">Панели (panel)</a></li>
+                      <li><a href="comp_callout.html">Выноски (Callout)</a></li>
+                      <li><a href="comp_media.html">Медиа-компонент (media)</a></li>
+                      <li><a href="comp_other.html">Другие компоненты</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div> <!-- //.panel -->
+              <!-- 3 панель -->
+              <div class="panel panel-warning">
+                <!-- Bootstrap 3 - JavaScript -->
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">Bootstrap 3 - Java Script</a>
+                  </h4>
+                </div>
+                <div id="collapseThree" class="panel-collapse collapse">
+                  <!-- Содержимое 3 панели -->
+                  <div class="panel-body">
+                    <ul class="nav nav-pills nav-stacked">
+                      <li><a href="js_btn.html">Кнопки (btn)</a></li>
+                      <li><a href="js_dropdown.html">Выпадающие списки (dropdown)</a></li>
+                      <li><a href="js_tooltip.html">Всплывающие подсказки (tooltip)</a></li>
+                      <li><a href="js_popover.html">Всплывающие панели (popover)</a></li>
+                      <li><a href="js_alert.html">Уведомления (alert)</a></li>
+                      <li><a href="js_tab.html">Динамические вкладки (tab)</a></li>
+                      <li><a href="js_modal.html">Модальные окна (modal)</a></li>
+                      <li><a href="js_collapse.html">Аккордеон (collapse)</a></li>
+                      <li><a href="js_carousel.html">Карусель (carousel)</a></li>
+                      <li><a href="js_scrollspy.html">ScrollSpy</a></li>
+                      <li><a href="js_affix.html">Affix</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div> <!-- //.panel -->
+              <!-- 4 панель -->
+              <div class="panel panel-success">
+                <!-- Заголовок 4 панели -->
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">Bootstrap 3 - Разное</a>
+                  </h4>
+                </div>
+                <div id="collapseFour" class="panel-collapse collapse">
+                  <!-- Содержимое 4 панели -->
+                  <div class="panel-body">
+                    <ul class="nav nav-pills nav-stacked">
+                      <li><a href=""></a></li>
+                      <li><a href=""></a></li>
+                      <li><a href=""></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div> <!-- //.panel -->
+              <!-- 5 панель -->
+              <div class="panel panel-warning">
+
+                <!-- Заголовок 5 панели -->
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive">Bootstrap 3 - Готовые сниплеты</a>
+                  </h4>
+                </div>
+                <div id="collapseFive" class="panel-collapse collapse">
+                  <!-- Содержимое 5 панели -->
+                    <ul class="nav nav-pills nav-stacked">
+                      <li><a href="#">Статья 1</a></li>
+                      <li><a href="#">Статья 2</a></li>
+                      <li><a href="#">Статья 3</a></li>
+                    </ul>
+                </div>
+              </div> <!-- //.panel -->
+            </div> <!-- /.panel-group -->
+          </div> <!-- /panel-body -->
+        </div> <!-- /.panel -->
+      </aside>
+    </div> <!-- /.row -->
+  </main>	<!-- /.container --> 
+
+	<!-- подвал -->
+  <footer class="container-fluid text-center">
+    <div class="row">
+      <div class="col-sm-12">
+        <p>Данная страница создана исключительно с целью освоения темы автором. Материал для обучения был взят с сайта <a href="http://itchief.ru/lessons/bootstrap-3/">itchief.ru</a></p>
+      </div>
+    </div>
+  </footer> <!-- /.container-fluid -->
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="../../js/prettify.js" type="text/javascript"></script>
+  <script type="text/javascript">
+jQuery(function () {
+   $("pre").each(function () {
+      var that = $(this);
+      var old_html = that.html();
+      var new_html = old_html.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+      that.html(new_html);
+      if(that.hasClass('demo')) {that.after(old_html);}
+   });
+});
+</script>
+</body>
+</html>
